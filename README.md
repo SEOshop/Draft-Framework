@@ -1,2 +1,2 @@
-# Draft-Framework
+# DRAFT
 SEOshop Theme Framework
