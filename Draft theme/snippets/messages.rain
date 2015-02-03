@@ -1,0 +1,25 @@
+{% if page.messages %}
+  <div class="messages">
+    {% if page.messages.info %}
+      <ul class="info">
+        {% for message in page.messages.info %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% if page.messages.success %}
+      <ul class="success">
+        {% for message in page.messages.success %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% if page.messages.error %}
+      <ul class="error">
+        {% for message in page.messages.error %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+{% endif %}

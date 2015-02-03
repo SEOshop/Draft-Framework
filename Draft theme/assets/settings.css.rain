@@ -1,0 +1,49 @@
+/*!
+ * Draft v0.9 (http://draft.seoshop.com)
+ * Copyright 2015 SEOshop BV.
+ * Licensed under MIT (https://github.com/SEOshop/LICENSE)
+ */
+/* General
+================================================== */
+body {
+  font-family: "{{ theme.body_google_webfonts }}", Helvetica, sans-serif;
+  background: {{ theme.background_color }} url('background_image.png') {{ theme.background_repeat }} {{ theme.background_position }};
+}
+h1, h2, h3, h4, h5, h6, .gui-page-title {
+  font-family: "{{ theme.headings_google_webfonts }}", Helvetica, sans-serif;
+}
+
+/* Colors
+================================================== */
+/* Highlight color */
+a, 
+a:visited,
+a:hover, 
+a:focus {
+  color: {{ theme.highlight_color }};
+}
+
+/* Highlight border-color */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: {{ theme.highlight_color }};
+}
+
+/* Highlight background-color */
+a.btn,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.navigation .burger.open li,
+.slider-pagination a.active {
+  background-color: {{ theme.highlight_color }};
+}
+
+/* Button color */
+a.btn, 
+a.btn span {
+  color: {{ theme.button_color }};
+}

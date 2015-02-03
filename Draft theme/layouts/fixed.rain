@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ shop.language }}">
+<head>
+  {% include 'blocks/head.rain' %}
+  <title>{{ page.title }} - {{ shop.name }}</title>
+  <meta name="description" content="{{ shop.description }}" />
+  <meta name="keywords" content="{{ shop.keywords }}" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="shortcut icon" href="{{ 'favicon.ico' | url_asset }}" type="image/x-icon" />
+
+
+  <link rel="stylesheet" href="{{ 'bootstrap.css' | url_asset }}" />
+  <link rel="stylesheet" href="{{ 'style.css' | url_asset }}" />       
+  <link rel="stylesheet" href="{{ 'settings.css' | url_asset }}" />  
+  <link rel="stylesheet" href="{{ 'custom.css' | url_asset }}" />
+
+  <script src="{{ 'jquery-1-9-1.js' | url_core }}"></script>
+  <script src="{{ 'jquery-ui-1-10-1.js' | url_core }}"></script>
+  <script type="text/javascript" src="{{ 'jquery-migrate-1-1-1.js' | url_core }}"></script>   
+
+  <script type="text/javascript" src="{{ 'global.js' | url_asset }}"></script>
+  <script type="text/javascript" src="{{ 'jcarousel.js' | url_asset }}"></script>
+  <script type="text/javascript" src="{{ 'gui.js' | url_core }}"></script>
+  <!--[if lt IE 9]>
+      <link rel="stylesheet" href="{{ 'style-ie.css' | url_asset }}" />
+      <![endif]-->
+    </head>
+    <body>
+     {% include 'snippets/messages.rain' %}
+     {% include template %}
+   </body>
+   {% if shop.links.powered_by %}
+   Powered by
+   {% for link in shop.links.powered_by %}
+   <a href="{{ link.url | url }}" title="{{ link.title }}"{% if link.new_window %} target="_blank"{% endif %}>{{ link.title }}</a>
+   {% if not loop.last %} - {% endif %}
+   {% endfor %}
+   {% endif %}
+   {% include 'blocks/body.rain' %}
+   </html>
